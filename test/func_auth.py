@@ -8,11 +8,9 @@ def authorization():
     driver = webdriver.Chrome(service=service)
 
 
-    # Переход на страницу авторизации
     driver.get('https://hh.ru/')
     time.sleep(2)
 
-    
     btn_entry = driver.find_element('xpath', '//*[@id="HH-React-Root"]/div/div[3]/div/div/div/div/div[5]/a')
     btn_entry.click()
     time.sleep(2)
@@ -23,7 +21,6 @@ def authorization():
 
     login = driver.find_element('xpath', '//*[@id="HH-React-Root"]/div/div[4]/div[1]/div/div/div/div/div/div[1]/div[1]/div/form/div[1]/fieldset/input')
     login.send_keys('test')
-
     password = driver.find_element("xpath", '//*[@id="HH-React-Root"]/div/div[4]/div[1]/div/div/div/div/div/div[1]/div[1]/div/form/div[2]/fieldset/input')
     password.send_keys("test")
 
